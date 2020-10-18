@@ -7,20 +7,19 @@ otherwise, run on `python_tooling` and `tests` by default.
 
 """
 
-import sys
 import os
+import sys
 
-# from pylint import epylint as lint
 from pylint.lint import Run
 
-PYLINT_CONFIG_FILE = '.config/pylintrc'
-BANDIT_CONFIG_FILE = '.config/bandit.yml'
-SOURCE_MODULE = 'python_tooling'
-TESTS_MODULE = 'tests'
+PYLINT_CONFIG_FILE = ".config/pylintrc"
+BANDIT_CONFIG_FILE = ".config/bandit.yml"
+SOURCE_MODULE = "python_tooling"
+TESTS_MODULE = "tests"
 
 
 def run_pylint(path=None):
-    pylint_arguments = ['--rcfile', PYLINT_CONFIG_FILE]
+    pylint_arguments = ["--rcfile", PYLINT_CONFIG_FILE]
     if path:
         pylint_arguments.append(path)
     else:
@@ -31,8 +30,8 @@ def run_pylint(path=None):
 
 
 def run_bandit(path=None):
-    print('Running bandit')
-    bandit_arguments = ['bandit', '-r', '-c', BANDIT_CONFIG_FILE]
+    print("Running bandit")
+    bandit_arguments = ["bandit", "-r", "-c", BANDIT_CONFIG_FILE]
     if path:
         bandit_arguments.append(path)
     else:

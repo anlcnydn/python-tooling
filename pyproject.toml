@@ -20,6 +20,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 linters = "bin.run_linters:run"
+formatters = "bin.run_formatters:format_all"
+check-formatters = "bin.run_formatters:check_all"
 
 [tool.black]
 line-length = 88
