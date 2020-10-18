@@ -19,7 +19,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-run = "wsgi:main"
+linters = "bin.run_linters:run"
 
 [tool.black]
 line-length = 88
